@@ -57,3 +57,31 @@ body {
 .switch__button--dark::before {
   left: 2rem;
 }
+
+.loading {
+  position: fixed;
+  background-color: var(--cor-primaria);
+  transition: 02ms;
+  width: 100vw;
+  height: 100vh;
+  font-size: 4.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.loading__spinner {
+  animation: spin 2s infinite linear;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading--hide {
+  visibility: hidden;
+  opacity: 0;
+}
